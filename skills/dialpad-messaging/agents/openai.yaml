@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dialpad Messaging"
+  short_description: "Read conversations and prepare authorized messages"
+  default_prompt: "Use $dialpad-messaging to review this customer conversation and draft a reply."

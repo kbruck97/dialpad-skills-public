@@ -1,0 +1,6 @@
+interface:
+  display_name: "Dialpad API"
+  short_description: "Scoped calls, transcripts, messages, and API actions"
+  default_prompt: "Use $dialpad-api to retrieve the relevant client conversations and cite the source records."
+policy:
+  allow_implicit_invocation: true

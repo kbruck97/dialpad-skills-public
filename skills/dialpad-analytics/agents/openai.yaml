@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dialpad Analytics"
+  short_description: "Build scoped call, text and performance reports"
+  default_prompt: "Use $dialpad-analytics to report on this department’s calls for the requested period."

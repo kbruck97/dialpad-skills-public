@@ -1,0 +1,15 @@
+{
+  "name": "dialpad-skills",
+  "version": "1.1.0",
+  "description": "Portable Dialpad API and conversation skills for Codex and Hermes.",
+  "license": "MIT",
+  "catalog_setup": "python3 scripts/update_catalog.py",
+  "python_requires": ">=3.10",
+  "runtimes": ["codex", "hermes"],
+  "skills_directory": "skills",
+  "skill_discovery": "Each immediate child containing SKILL.md is a packaged skill.",
+  "installer": "scripts/install.py",
+  "validation": "scripts/validate_pack.py",
+  "release_builder": "scripts/build_release.py",
+  "credentials_included": false
+}

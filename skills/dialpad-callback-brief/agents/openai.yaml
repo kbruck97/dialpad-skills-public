@@ -1,0 +1,6 @@
+interface:
+  display_name: "Dialpad Callback Brief"
+  short_description: "Prepare a sourced customer callback or handoff"
+  default_prompt: "Use $dialpad-callback-brief to prepare my callback brief from the relevant customer conversations."
+policy:
+  allow_implicit_invocation: true

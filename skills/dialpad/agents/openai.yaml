@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dialpad Skill Pack"
+  short_description: "Route Dialpad requests to focused workflows"
+  default_prompt: "Use $dialpad to choose the right workflow for my Dialpad request."

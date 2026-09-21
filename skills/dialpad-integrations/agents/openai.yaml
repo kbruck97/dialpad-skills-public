@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dialpad Integrations"
+  short_description: "Connect APIs, MCP tools and event subscriptions"
+  default_prompt: "Use $dialpad-integrations to inspect the available Dialpad connection options."

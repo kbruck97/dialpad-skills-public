@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dialpad Administration"
+  short_description: "Inspect and manage authorized Dialpad settings"
+  default_prompt: "Use $dialpad-administration to inspect the settings for this contact center."

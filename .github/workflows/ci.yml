@@ -1,0 +1,33 @@
+name: Validate skill pack
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python: ['3.10', '3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Compile
+        run: python -m compileall -q scripts skills tests
+      - name: Validate public source before catalog bootstrap
+        run: python scripts/validate_pack.py
+      - name: Bootstrap local catalog from official Dialpad specification
+        run: python scripts/update_catalog.py
+      - name: Offline tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate package
+        run: python scripts/validate_pack.py
+      - name: Build deterministic release
+        run: python scripts/build_release.py --out-dir dist
+      - name: Verify release
+        run: python scripts/build_release.py --verify "dist/dialpad-skills-$(cat VERSION).zip"
